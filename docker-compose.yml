@@ -33,11 +33,11 @@ services:
     ports:
       - 32458:9100
     restart: always
-    network_mode: host
     pid: host
     volumes:
       - '/:/host:ro,rslave'
-
+    networks:
+      - promnet
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
