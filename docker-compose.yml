@@ -37,8 +37,7 @@ services:
     pid: host
     volumes:
       - '/:/host:ro,rslave'
-    networks:
-      - promnet
+
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
