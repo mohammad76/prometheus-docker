@@ -57,7 +57,7 @@ services:
       - promnet
 
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana
     container_name: "grafana"
       hostname: "grafana"
     ports:
