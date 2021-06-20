@@ -1,7 +1,7 @@
 #!/bin/bash
 
 host_ip=$(hostname  -i)
-echo "your host ip is $host_ip"
+echo "your host ip is: $host_ip"
 echo "adding iptables rules ..."
 iptables -I INPUT -p tcp -m tcp --dport 9100 -j DROP
 iptables -I INPUT -s "$host_ip"/32 -p tcp -m tcp -j ACCEPT
@@ -21,6 +21,6 @@ iptables -I DOCKER-USER -s 172.16.0.0/12 -p tcp -m tcp -j ACCEPT
 iptables -I DOCKER-USER -s 192.168.0.0/16 -p tcp -m tcp -j ACCEPT
 echo "all rules added to iptables"
 
-echo "saving rules to iptables persistent"
+echo "saving rules to iptables persistent ..."
 iptables-save > /etc/iptables/rules.v4
 echo "all rules saved to /etc/iptables/rules.v4"
