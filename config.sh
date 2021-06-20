@@ -1,7 +1,7 @@
 #!/bin/bash
 
 host_ip=$(hostname  -i)
-
+echo "your host ip is $host_ip"
 iptables -I INPUT -p tcp -m tcp --dport 9100 -j DROP
 iptables -I INPUT -s "$host_ip"/32 -p tcp -m tcp -j ACCEPT
 iptables -I INPUT -s 127.0.0.0/8 -p tcp -m tcp -j ACCEPT
