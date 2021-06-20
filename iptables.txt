@@ -1,4 +1,0 @@
--A INPUT -p tcp -m tcp --dport 9100 -j DROP
--A DOCKER-USER -p tcp -m tcp --dport 9090 -j DROP
--A DOCKER-USER -p tcp -m tcp --dport 9093 -j DROP
--A DOCKER-USER -p tcp -m tcp --dport 8080 -j DROP
