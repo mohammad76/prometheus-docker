@@ -31,8 +31,6 @@ services:
     hostname: "node_exporter"
     command:
       - '--path.rootfs=/host'
-    ports:
-      - 32458:9100
     restart: always
     network_mode: host
     pid: host
